@@ -1,0 +1,25 @@
+FBI System
+
+json web token 
+
+
+Objetivo: gestionar misiones secretas.
+
+
+con node y express levantar rutas a las que solo pueden acceder usuarios autorizados 
+
+Requerimientos
+0. Disponibilizar una ruta principal para hacer login --check
+
+1- Ruta que autentique a un agente basado en sus credenciales  (conectando con agentes.js) -- check
+ - y genere un TOKEN (JWT) --check
+
+2- Al autenticar devolver un html 
+*que muestre el mail del agente*
+- y guarde un token en session storage con expiracion de 1 minuto.
+Disponibilizar un hiperenlace <a href='/rutasecreta'> INGRESA A LA SUPER PAGINA SECRETA</a>
+(disponibilizar) para acceder a una ruta restringida
+3- Ruta restringida que devuelve un mensaje de bienvenida con el mail del agente autorizado.
+en caso contrario devolver un estado http 401 que indique que el usuario no esta autorizado y un mensaje que describe el error. 
+
+
